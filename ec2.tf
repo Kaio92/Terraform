@@ -1,3 +1,7 @@
+data "aws_vpc" "default" {
+  default = true
+}
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -18,3 +22,4 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
